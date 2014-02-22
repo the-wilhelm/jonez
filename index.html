@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+        <script type="text/javascript" src="js/flowtype.js"></script>
+        <script type="text/javascript" src="js/default.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/default.css" type="text/css">
+        <noscript>
+            <style>
+                .cn-images img{position: relative;display: block;border-bottom: 5px solid #d0ab47;} 
+                .cn-slideshow{height: auto;}
+            </style>
+        </noscript>
+		<script id="barTmpl" type="text/x-jquery-tmpl">
+            <div class="cn-bar">
+                <div class="cn-nav">
+					<a href="#" class="cn-nav-prev">
+                        <span>Previous</span>
+						<div style="background-image:url(${prevSource});"></div> 
+					</a>
+					<a href="#" class="cn-nav-next">
+                        <span>Next</span>
+						<div style="background-image:url(${nextSource});"></div>
+					</a>
+                </div><!-- cn-nav -->
+                <div class="cn-nav-content">
+                    <div class="cn-nav-content-prev">
+                        <span>Prev image</span>
+                        <h3>${prevTitle}</h3>
+                    </div>
+                    <div class="cn-nav-content-current">
+                        <span>Currently viewing</span>
+                        <h2>${currentTitle}</h2>
+                    </div>
+                    <div class="cn-nav-content-next">
+                        <span>Next image</span>
+                        <h3>${nextTitle}</h3>
+                    </div>
+                </div><!-- cn-nav-content -->
+            </div><!-- cn-bar -->
+		</script>
+    </head>
+    <body>
+        <div class="backbar"></div>
+        <div class="container-fluid">
+            <div class="dka-container visible">
+                <div class="dka-scroll">
+                    <div class="sections">
+                        <div class="section top one" data-column="1" data-view="about">
+                            <div class="view-port view view-sixth view-click" data-view="about" data-column="1" data-state="inactive">
+                                <img src="images/about.jpg" />
+                            </div>
+                        </div>
+                        <div class="section bottom one" data-column="1" data-view="buses">
+                            <div class="view-port view view-sixth view-click" data-view="buses" data-column="1" data-state="inactive">
+                                <img src="images/buses.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pages">
+                        <div class="page about" data-view="about" data-column="1">
+                            <div class="holder" data-type="background" data-speed="10"></div>
+                        </div>
+                        <div class="page buses" data-view="buses" data-column="1">
+                            <div class="holder" data-type="background" data-speed="10"></div>
+                        </div>
+                    </div>
+                    <div class="sections">
+                        <div class="section top two" data-column="2" data-view="rates">
+                            <div class="view-port view view-sixth view-click" data-view="rates" data-column="2" data-state="inactive">
+                                <img src="images/rates.jpg" />
+                            </div>
+                        </div>
+                        <div class="section bottom two" data-column="2" data-view="gallery">
+                            <div class="view-port view view-sixth view-click" data-view="gallery" data-column="2" data-state="inactive">
+                                <img src="images/gallery.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pages">
+                        <div class="page rates" data-view="rates" data-column="2">
+                            <div class="holder" data-type="background" data-speed="10"></div>
+                        </div>
+                        <div class="page gallery" data-view="gallery" data-column="2">
+                            <div class="holder" data-type="background" data-speed="10"></div>
+                        </div>
+                    </div>
+                    <div class="sections">
+                        <div class="section top three" data-column="3" data-view="specials">
+                            <div class="view-port view view-sixth view-click" data-view="specials" data-column="3" data-state="inactive">
+                                <img src="images/specials.jpg" />
+                            </div>
+                        </div>
+                        <div class="section bottom three" data-column="3" data-view="contact">
+                            <div class="view-port view view-sixth view-click" data-view="contact" data-column="3" data-state="inactive">
+                                <img src="images/contact.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pages">
+                        <div class="page specials" data-view="specials" data-column="3">
+                            <div class="holder" data-type="background" data-speed="10"></div>
+                        </div>
+                        <div class="page contact" data-view="contact" data-column="3">
+                            <div class="holder" data-type="background" data-speed="10"></div>
+                        </div>
+                    </div>
+                    <div class="sections">
+                        <div class="section top four" data-column="4">
+                            <div class="view-port" data-view="form" data-column="4" data-state="inactive">  
+                                <img src="images/logo.png" class="logo" />
+                                <h2>Book A Bus</h2>
+                                <h4>It's as easy as 1.. 2.. 3..</h4>
+                            </div>
+                        </div>
+                        <div class="section bottom four" data-column="4" data-state="inactive">
+                            <div class="view-port" data-view="form" data-column="4" data-state="inactive">
+                                <div class="form">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Date">
+                                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

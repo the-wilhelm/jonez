@@ -1,0 +1,67 @@
+<div class="content-container" data-view="buses">
+    <div class="inner-container">
+        <div class="bus-holder">
+            <div class="bus-row">
+                <div class="bus active" data-bus="1"><img src="images/thumbnails/bus1.jpg" /></div>
+                <div class="bus" data-bus="2"><img src="images/thumbnails/bus2.jpg" /></div>
+                <div class="bus" data-bus="3"><img src="images/thumbnails/bus3.jpg" /></div>
+                <div class="bus" data-bus="4"><img src="images/thumbnails/bus4.jpg" /></div>
+                <div class="bus" data-bus="5"><img src="images/thumbnails/bus5.jpg" /></div>
+                <div class="bus" data-bus="6"><img src="images/thumbnails/bus6.jpg" /></div>
+                <br clear="all" />
+            </div>
+            <div class="bus-content">
+                <div class="image"><img src="images/large/buses/1/1.jpg" id="shown"></div>
+                <div class="smalls">
+                    <div class="small"><img src="images/large/buses/1/1.jpg" data-image="images/large/buses/1/1.jpg" /></div>
+                    <div class="small"><img src="images/large/buses/1/2.jpg" data-image="images/large/buses/1/2.jpg" /></div>
+                    <div class="small"><img src="images/large/buses/1/3.jpg" data-image="images/large/buses/1/3.jpg" /></div>
+                    <div class="small"><img src="images/large/buses/1/4.jpg" data-image="images/large/buses/1/4.jpg" /></div>
+                </div>
+                <div class="info">
+                    <h2>Jone-Z #1</h2>
+                    <div class="infosec">
+                        <p>Capacity <small>Up to 30 passengers</small></p>
+                    </div>
+                    <div class="infosec">
+                        <p>Seating <small>Custom hour glass seating</small></p>
+                    </div>
+                    <div class="infosec">
+                        <p>Interior <small>Stainless steel vertical hand rails</small></p>
+                    </div>
+                    <div class="infosec">
+                        <p>Privacy <small>Limo tinted black windows</small></p>
+                    </div>
+                    <div class="infosec">
+                        <p>Lighting <small>LED rope lights and dance party lights</small></p>
+                    </div>
+                </div>
+                <br clear="all" />
+            </div>
+            <div class="bus-row">
+                <div class="bus" data-bus="7"><img src="images/thumbnails/bus1.jpg" /></div>
+                <div class="bus" data-bus="8"><img src="images/thumbnails/bus2.jpg" /></div>
+                <div class="bus" data-bus="9"><img src="images/thumbnails/bus3.jpg" /></div>
+                <div class="bus" data-bus="10"><img src="images/thumbnails/bus4.jpg" /></div>
+                <div class="bus" data-bus="11"><img src="images/thumbnails/bus5.jpg" /></div>
+                <div class="bus" data-bus="12"><img src="images/thumbnails/bus6.jpg" /></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var old = $('.active').data('bus');
+        
+        $('.small img').hover(function(){
+           $('#shown').attr('src', $(this).data('image')); 
+        });
+        
+        $('.bus').click(function(){
+            $('.bus[data-bus="'+old+'"]').css('background', 'transparent');
+            $('.bus[data-bus="'+$(this).data('bus')+'"]').css('background', '#f92d2e');
+            
+            old = $(this).data('bus');
+        });
+    });
+</script>

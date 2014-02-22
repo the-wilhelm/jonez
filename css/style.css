@@ -1,0 +1,145 @@
+body {
+}
+
+blockquote {
+	 font-size: 26px;
+	 line-height: 37px;
+	 text-indent: 0px;
+	 letter-spacing: 0px;
+	 text-transform: none;
+	 -webkit-column-rule-style: solid;
+	 -o-column-rule-style: solid;
+	 -moz-column-rule-style: solid;
+	 -ms-column-rule-style: solid;
+	 column-rule-style: solid;
+	 -webkit-column-count: 1;
+	 -o-column-count: 1;
+	 -moz-column-count: 1;
+	 -ms-column-count: 1;
+	 column-count: 1;
+	 -webkit-column-width: 0px;
+	 -o-column-width: 0px;
+	 -moz-column-width: 0px;
+	 -ms-column-width: 0px;
+	 column-width: 0px;
+	 clear: right;
+	 margin: 0px 0px 25px 0px;
+	 color: rgba(0, 172, 238, 1);
+	 border-width: 0px 0px 0px 2px;
+	 border-style: solid;
+	 padding: 0px 0px 0px 20px;
+	 border-color: rgba(73, 73, 73, 1);
+}
+
+h1 {
+	 font-size: 68px;
+	 line-height: 75px;
+	 margin-bottom: 25px;
+	 color: rgba(0, 172, 238, 1);
+	 text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+    font-family:'HelveticaNeue-CondensedBold', 'Helvetica Neue', sans-serif;
+}
+
+h2 {
+	 font-size: 42px;
+	 line-height: 50px;
+	 margin-bottom: 25px;
+	 color: rgba(255, 255, 255, 1);
+	 text-shadow: 2px 2px 0px rgba(0, 0, 0, 1);
+    font-family:'HelveticaNeue-CondensedBold', 'Helvetica Neue', sans-serif;
+}
+
+h3 {
+	 font-size: 26px;
+	 line-height: 50px;
+	 margin-bottom: 25px;
+	 color: rgba(0, 172, 238, 1);
+}
+
+h4 {
+	 margin-bottom: 25px;
+	 font-family: mf-centrale-sans-204690;
+}
+
+h5 {
+	 margin-bottom: 25px;
+}
+
+h6 {
+	 margin-bottom: 25px;
+}
+
+p {
+	 margin-bottom: 25px;
+	 line-height: 29px;
+}
+
+p.intro {
+	 font-size: 18px;
+}
+
+a {
+	 color: rgba(0, 172, 238, 1);
+}
+
+ul {
+	 margin: 10px 20px;
+	 padding: 10px 20px;
+}
+
+li {
+	 margin: 0px 0px 15px 0px;
+}
+
+ol {
+	 margin: 10px 20px;
+	 padding: 10px 20px;
+}
+
+strong {
+	 color: rgba(51, 51, 51, 1);
+}
+
+em {
+}
+
+a a {
+	 color: rgba(0, 172, 238, 1);
+	 text-decoration: none;
+}
+
+a a:hover {
+	 color: rgba(51, 51, 51, 1);
+	 text-decoration: none;
+}
+
+a a:visited {
+	 color: rgba(0, 172, 238, 1);
+	 text-decoration: none;
+}
+
+strong a {
+	 color: rgba(0, 172, 238, 1);
+	 text-decoration: none;
+}
+
+strong a:hover {
+	 color: rgba(30, 155, 201, 1);
+}
+
+strong a:visited {
+	 color: rgba(0, 172, 238, 1);
+}
+
+em a {
+	 color: rgba(0, 172, 238, 1);
+}
+
+em a:hover {
+	 color: rgba(51, 51, 51, 1);
+}
+
+em a:visited {
+	 color: rgba(0, 172, 238, 1);
+}
+
