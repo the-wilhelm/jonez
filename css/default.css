@@ -4,6 +4,19 @@ h1, h2, h3{font-family:'HelveticaNeue-CondensedBold', 'Helvetica Neue', sans-ser
 
 h2{color:#f92d2e;font-size:1.6rem;line-height:1rem;}
 
+a, a:visited{
+    color:#f92d2e;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; 
+}
+
+a:hover{
+    color:#fff;
+    text-decoration:none;
+}
+
 body{
     font-family:'Helvetica Neue', sans-serif;
     font-size:.8rem;
@@ -606,6 +619,108 @@ a.cn-nav-next{
     -moz-border-radius: 45px;
     -webkit-border-radius: 45px;
     border-radius: 45px; 
+}
+
+.bus-row{
+    width:100%;   
+}
+
+.bus-row .active{
+    background:#e33637;  
+}
+
+.bus{
+    width:16.6666667%;
+    float:left;
+    padding:10px;
+    transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+}
+
+.bus img{
+    opacity: 1;
+}
+
+.bus:hover{
+    padding:5px;   
+}   
+    
+.bus-content{
+    width:100%;
+    background:#f92d2e;
+    padding:10px;
+}
+
+.bus-content .image{
+    width:40%;
+    float:left;
+}
+
+.bus-content .smalls{
+    width:10%;
+    float:left;
+}
+
+.bus-content .smalls .small{
+    padding:10px   
+}
+
+.bus-content .smalls .small:first{
+    padding:0 10px 10px 10px;   
+}
+
+.bus-content .info{
+    width:50%;
+    float:left;
+}
+
+.bus-content .info h2{
+    color:#fff;
+    border-bottom:2px solid #fff;
+    padding-bottom:15px;
+    margin-bottom:20px;
+}
+
+.bus-content .info .infosec p{   
+    font-weight:bold;
+    font-size:22px;
+}
+
+.bus-content .info .infosec p small{
+    font-weight:300;
+    font-size:16px;
+}
+
+.info .phone,
+.info .email{
+    font-weight:bold;
+    font-size:32px;
+    text-align:center;
+    width:50%;
+    float:left;
+}
+
+.info .title{
+}
+
+/* Flexible iFrame */
+
+.map {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.map iframe,   
+.map object,  
+.map embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 /*#gallery_wrapper .list{
