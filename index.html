@@ -1,12 +1,17 @@
 <html>
     <head>
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.css" type="text/css">
+        <link rel="stylesheet" href="css/bootstrap-datetimepicker.css" type="text/css">
+        <link rel="stylesheet" href="css/default.css" type="text/css">
         <script type="text/javascript" src="js/jquery-2.1.0.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
         <script type="text/javascript" src="js/flowtype.js"></script>
+        <script type="text/javascript" src="js/moment.js"></script>
+        <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript" src="js/jquery.bootstrap.wizard.js"></script>
         <script type="text/javascript" src="js/default.js"></script>
-        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="css/default.css" type="text/css">
         <noscript>
             <style>
                 .cn-images img{position: relative;display: block;border-bottom: 5px solid #d0ab47;} 
@@ -109,25 +114,297 @@
                     </div>
                     <div class="sections">
                         <div class="section top four" data-column="4">
-                            <div class="view-port" data-view="form" data-column="4" data-state="inactive">  
-                                <img src="images/logo.png" class="logo" />
-                                <h2>Book A Bus</h2>
-                                <h4>It's as easy as 1.. 2.. 3..</h4>
+                            <div data-view="form" data-column="4" data-state="inactive">  
+                                <div class="four-top"><img src="images/logo.png" class="logo" /></div>
+                                <div class="four-bottom">
+                                    <h2>Book A Bus</h2>
+                                    <h4>It's as easy as 1.. 2.. 3..</h4>
+                                </div>
                             </div>
                         </div>
                         <div class="section bottom four" data-column="4" data-state="inactive">
                             <div class="view-port" data-view="form" data-column="4" data-state="inactive">
-                                <div class="form">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Date">
-                                        <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                                <form role="form">
+                                    <div class="form form-group">
+                                        <div class="input-group date">
+                                            <input type='text' class="form-control" id="datetimepicker1" placeholder="Date" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
                                     </div>
-                                </div>
+                                    <div class='form-bottom lefty'>
+                                        <div class="form-group">
+                                            <div class='input-group date'>
+                                                <input type='text' class="form-control" id='datetimepicker2' placeholder="Start" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-time"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='form-bottom'>
+                                        <div class="form-group">
+                                            <div class='input-group date'>
+                                                <input type='text' class="form-control" id='datetimepicker3' placeholder="End" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-time"></span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-default pull-right">Submit</button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        
+        <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Reservation Form</h4>
+                    </div>
+                    <div class="modal-body">
+                        <section id="wizard">
+                            <div id="rootwizard">
+                                <div class="navbar navbar-default">
+                                        <ul class="nav navbar-nav">
+                                            <li id="nav1" ><a href="#tab1" data-toggle="tab">Choose Date</a></li>
+                                            <li id="nav2" ><a href="#tab2" data-toggle="tab">Choose Bus</a></li>
+                                            <li id="nav3"><a href="#tab3" data-toggle="tab">Personal Information</a></li>
+                                        </ul>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="tab-pane" id="tab1">
+                                        <form role="form">
+                                            <div class="form form-group">
+                                                <div class="input-group date">
+                                                    <input type='text' class="form-control" id="datetimepicker4" name="date" placeholder="Date" required />
+                                                    <span class="input-group-addon">
+                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class='form-bottom lefty'>
+                                                <div class="form-group">
+                                                    <div class='input-group date'>
+                                                        <input type='text' class="form-control" id='datetimepicker5' name="start" placeholder="Start" required />
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-time"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class='form-bottom'>
+                                                <div class="form-group">
+                                                    <div class='input-group date'>
+                                                        <input type='text' class="form-control" id='datetimepicker6' name="end" placeholder="End" required />
+                                                        <span class="input-group-addon">
+                                                            <span class="glyphicon glyphicon-time"></span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="tab-pane" id="tab2">
+                                        <div class="tab-buses">
+                                            <div class="tab-bus" data-val="check0">
+                                                <img src="images/thumbnails/bus1.jpg" />
+                                                <div class="tab-title">Jone-Z #1</div>
+                                            </div>
+                                            <div class="tab-bus" data-val="check1">
+                                                <img src="images/thumbnails/bus2.jpg" />
+                                                <div class="tab-title">Jone-Z #1</div>
+                                            </div>
+                                            <div class="tab-bus" data-val="check2">
+                                                <img src="images/thumbnails/bus3.jpg" />
+                                                <div class="tab-title">Jone-Z #1</div>
+                                            </div>
+                                            <div class="tab-bus" data-val="check3">
+                                                <img src="images/thumbnails/bus4.jpg" />
+                                                <div class="tab-title">Jone-Z #1</div>
+                                            </div>
+                                            <div class="tab-bus" data-val="check4">
+                                                <img src="images/thumbnails/bus5.jpg" />
+                                                <div class="tab-title">Jone-Z #1</div>
+                                            </div>
+                                            <div class="tab-bus" data-val="check5">
+                                                <img src="images/thumbnails/bus6.jpg" />
+                                                <div class="tab-title">Jone-Z #1</div>
+                                            </div>
+                                            <div class="tab-bus" data-val="check6">
+                                                <img src="images/thumbnails/bus7.jpg" />
+                                                <div class="tab-title">Jone-Z #1</div>
+                                            </div>
+                                            <div class="tab-bus" data-val="check7">
+                                                <img src="images/thumbnails/bus8.jpg" />
+                                                <div class="tab-title">Jone-Z #1</div>
+                                            </div>
+                                            <div class="tab-bus" data-val="check8">
+                                                <img src="images/thumbnails/bus9.jpg" />
+                                                <div class="tab-title">Jone-Z #1</div>
+                                            </div>
+                                            <div class="tab-bus" data-val="check9">
+                                                <img src="images/thumbnails/bus10.jpg" />
+                                                <div class="tab-title">Jone-Z #1</div>
+                                            </div>
+                                            <div class="tab-bus" data-val="check10">
+                                                <img src="images/thumbnails/bus11.jpg" />
+                                                <div class="tab-title">Jone-Z #1</div>
+                                            </div>
+                                            <div class="tab-bus" data-val="check11">
+                                                <img src="images/thumbnails/bus12.jpg" />
+                                                <div class="tab-title">Jone-Z #1</div>
+                                            </div>
+                                            <br clear="all" />
+                                        </div>
+                                        <form class="bus-form">
+                                            <input type="radio" name="bus" id="check0" value="0" />
+                                            <input type="radio" name="bus" id="check1" value="1" />
+                                            <input type="radio" name="bus" id="check2" value="2" />
+                                            <input type="radio" name="bus" id="check3" value="3" />
+                                            <input type="radio" name="bus" id="check4" value="4" />
+                                            <input type="radio" name="bus" id="check5" value="5" />
+                                            <input type="radio" name="bus" id="check6" value="6" />
+                                            <input type="radio" name="bus" id="check7" value="7" />
+                                            <input type="radio" name="bus" id="check8" value="8" />
+                                            <input type="radio" name="bus" id="check9" value="9" />
+                                            <input type="radio" name="bus" id="check10" value="10" />
+                                            <input type="radio" name="bus" id="check11" value="11" />
+                                        </form>
+                                    </div>
+                                    <div class="tab-pane" id="tab3">
+                                        <form>
+                                            <div class='two-input lefty'>
+                                                <input type='text' name="first" class="form-control" placeholder="First Name" required />
+                                            </div>
+                                            <div class='two-input'>
+                                                <input type='text' name="last" class="form-control" placeholder="Last Name" required />
+                                            </div>
+                                            <br clear="all" />
+                                            
+                                            <div class='two-input lefty'>
+                                                <input type='text' name="phone" class="form-control" placeholder="Phone" required />
+                                            </div>
+                                            <div class='two-input'>
+                                                <input type='text' name="email" class="form-control" placeholder="Email" required />
+                                            </div>
+                                            <br clear="all" />
+                                            
+                                            <div class='two-input lefty'>
+                                                <input type='text' name="add1" class="form-control" placeholder="Pickup Address" required />
+                                            </div>
+                                            <div class='two-input'>
+                                                <input type='text' name="add2" class="form-control" placeholder="" required />
+                                            </div>
+                                            <br clear="all" />
+                                            
+                                            <div class='three-input lefty'>
+                                                <input type='text' name="city" class="form-control" placeholder="City" required />
+                                            </div>
+                                            <div class='three-input lefty'>
+                                                <select class="form-control" name="State" placeholder="State" required>
+                                                    <option>State</option>
+                                                    <option value="">NE</option>
+                                                    <option value="">FL</option>
+                                                    <option value="">MI</option>
+                                                    <option value="">OH</option>
+                                                </select>
+                                            </div>
+                                            <div class='three-input'>
+                                                <input type='text' name="state" class="form-control" placeholder="Zip" required />
+                                            </div>
+                                            <br clear="all" />
+                                            
+                                            <div class='two-input lefty'>
+                                                <select class="form-control" name="type" placeholder="Party Type" required>
+                                                    <option>Party Type</option>
+                                                    <option value="Bachelor Party">Bacher Party</option>
+                                                    <option value="Bachelorette Party">Bachlorette Party</option>
+                                                    <option value="Bar-Hop">Bar-Hop</option>
+                                                    <option value="Birthday">Birthday</option>
+                                                    <option value="21st Birthday">21st Birthday</option>
+                                                    <option value="Suprise Party">Suprise Party</option>
+                                                    <option value="Wedding">Wedding</option>
+                                                    <option value="Corporate Party">Corporate Party</option>
+                                                    <option value="Graduation">Graduation</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </div>
+                                            <div class='two-input'>
+                                                <select class="form-control" name="aprox" placeholder="Approx. # of People" required>
+                                                    <option>Approx. # of People</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="1">5</option>
+                                                    <option value="2">6</option>
+                                                    <option value="3">7</option>
+                                                    <option value="4">8</option>
+                                                    <option value="1">9</option>
+                                                    <option value="2">10</option>
+                                                    <option value="3">11</option>
+                                                    <option value="4">12</option>
+                                                    <option value="1">13</option>
+                                                    <option value="2">14</option>
+                                                    <option value="3">15</option>
+                                                    <option value="4">16</option>
+                                                    <option value="1">17</option>
+                                                    <option value="2">18</option>
+                                                    <option value="3">19</option>
+                                                    <option value="4">20</option>
+                                                    <option value="1">21</option>
+                                                    <option value="2">22</option>
+                                                    <option value="3">23</option>
+                                                    <option value="4">24</option>
+                                                    <option value="1">25</option>
+                                                    <option value="2">26</option>
+                                                    <option value="3">27</option>
+                                                    <option value="4">28</option>
+                                                    <option value="1">29</option>
+                                                    <option value="2">30</option>
+                                                    <option value="3">31</option>
+                                                    <option value="4">32</option>
+                                                    <option value="1">33</option>
+                                                    <option value="2">34</option>
+                                                    <option value="3">35</option>
+                                                    <option value="4">36</option>
+                                                    <option value="1">37</option>
+                                                    <option value="2">38</option>
+                                                    <option value="3">39</option>
+                                                    <option value="4">40</option>
+                                                    <option value="1">41</option>
+                                                    <option value="2">42</option>
+                                                    <option value="3">43</option>
+                                                    <option value="4">44</option>
+                                                    <option value="1">45</option>
+                                                </select>
+                                            </div>
+                                            <br clear="all" />
+                                        </form>
+                                    </div>
+                                </div>
+                                <div id="bar" class="progress progress-striped active">
+                                    <div class="bar progress-bar progress-bar-danger" role="progressbar"></div>
+                                </div>
+                                <ul class="pager wizard">
+                                    <li class="previous"><a href="#">Previous</a></li>
+                                    <li class="next"><a href="#">Next</a></li>
+                                    <li class="next finish" style="display:none;"><a href="javascript:;">Finish</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
     </body>
 </html>

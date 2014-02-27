@@ -23,6 +23,20 @@ body{
     font-weight:300;
 }
 
+.section[data-column="4"] h2{
+    color:#fff;
+    font-size:42px !important;
+    line-height:45px;
+}
+
+.section[data-column="4"] h4{
+    color:#fff;
+    font-size:18px;
+    font-weight: 300 !important;
+    font-style: italic;
+    margin-top:6%;
+}
+
 table.table{
     border:0;
     color:#fff;
@@ -238,8 +252,25 @@ ul li{
     width:80%;
 }
 
+.four-top{
+    position:relative;
+    top:0;
+    height:60%;
+}
+
+.four-bottom{
+    position:absolute;
+    bottom:10%;
+    height:20%;
+    padding-left:9%;
+    width:100%;
+}
+
 .logo{
-    margin-bottom:15%   
+    position:absolute;
+    bottom:5%;
+    width:90%;
+    height:auto;
 }
 
 #gallery_wrapper{
@@ -723,6 +754,74 @@ a.cn-nav-next{
     width: 100%;
 }
 
+.form-bottom{
+    width:49%;
+    float:left;
+}
+
+.lefty{
+    margin-right:2%;   
+}
+
+.bus-form{
+    display:none;   
+}
+
+.tab-buses{
+    width:100%;   
+}
+
+.tab-bus{
+    width:14.66%;
+    float:left;
+    padding:1% 1% .5% 1%;
+    margin:1%;
+    font-size:12px;
+    text-align:center;
+    background:#333;
+    color:#fff;
+    -webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	-o-transition: all 0.2s ease-out;
+	-ms-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+    cursor:pointer;
+}
+
+.tab-bus:hover{
+    background:#555;   
+}
+
+.tab-bus .tab-title{
+    margin-top:5%;
+    font-weight:bold;
+}
+
+.tab-active{
+    background:#999;   
+}
+
+.tab-active:hover{
+    background: #999;   
+}
+
+.two-input{
+    float:left;
+    width:49%;
+    margin-bottom:2%;
+}
+
+.three-input{
+    float:left;
+    width:32%;
+    margin-bottom:2%;
+}
+
+.two-input input[type="text"],
+.three-input input[type="text"]{
+    width:100%;   
+}
+
 /*#gallery_wrapper .list{
     width: 100%;
     overflow: hidden;
@@ -829,6 +928,22 @@ a.cn-nav-next{
     
     .minimums .rightside{
         margin-left:2%;   
+    }
+    
+    
+
+    .section[data-column="4"] h2{
+        color:#fff;
+        font-size:58px !important;
+        line-height:45px
+    }
+
+    .section[data-column="4"] h4{
+        color:#fff;
+        font-size:24px;
+        font-weight: 300 !important;
+        font-style: italic;
+        margin-top:6%;
     }
 }
  
